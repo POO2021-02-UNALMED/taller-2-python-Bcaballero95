@@ -17,7 +17,7 @@ class Motor :
         self.tipo = tipo
         self.registro = registro
 
-    def cambiarRegsitro (self, r) :
+    def cambiarRegistro (self, r) :
         self.registro = r
 
     def asignarTipo (self, tipo) :
@@ -39,7 +39,7 @@ class Auto :
     def cantidadAsientos (self) :
         c = 0
         for i in self.asientos :
-            if isinstance (self.asientos[i], Asiento) :
+            if isinstance (i, Asiento) :
                 c += 1
         return c
 
@@ -47,7 +47,7 @@ class Auto :
         ok = False
         if self.motor.registro == self.registro :
             for i in self.asientos :
-                if isinstance (self.asientos[i], Asiento) and self.asientos[1].registro == self.registro :
+                if isinstance (i, Asiento) and i.registro == self.registro :
                     ok = True
                 else :
                     ok = False
