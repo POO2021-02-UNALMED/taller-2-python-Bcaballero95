@@ -44,18 +44,18 @@ class Auto :
         return c
 
     def verificarIntegridad (self) :
-        ok = False
+        okk = False
         if self.motor.registro == self.registro :
             for i in self.asientos :
                 if isinstance (i, Asiento) and i.registro == self.registro :
-                    ok = True
+                    okk = True
                 elif  isinstance (i, Asiento) and i.registro != self.registro:
-                    ok = False
+                    okk = False
                     break
         else:
-            ok = False
+            okk = False
 
-        if ok == False:
+        if okk == False:
             print ("Las piezas no son originales")
         else:
             print ("Auto original")
