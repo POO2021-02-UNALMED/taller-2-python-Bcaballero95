@@ -49,10 +49,20 @@ class Auto :
             for i in self.asientos :
                 if isinstance (i, Asiento) and i.registro == self.registro :
                     ok = True
-                else :
+                elif  isinstance (i, Asiento) and i.registro != self.registro:
                     ok = False
                     break
-        if ok == False :
+        else:
+            ok = False
+
+        if ok == False:
             print ("Las piezas no son originales")
-        else :
+        else:
             print ("Auto original")
+
+
+a1 = Auto("model 3", 33000, [Asiento("blanco", 5000, 32),None, None, Asiento("blanco", 5000, 32), None],"tesla", Motor(4, "electrico", 32), 32)
+a2 = Auto("model 3", 33000, [Asiento("blanco", 5000, 40),None, None, Asiento("blanco", 5000, 32), None],"tesla", Motor(4, "electrico", 32), 32)
+
+a1.verificarIntegridad()
+a2.verificarIntegridad()
