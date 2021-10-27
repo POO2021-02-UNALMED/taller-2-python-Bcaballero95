@@ -56,9 +56,9 @@ class Auto :
             okk = False
 
         if okk == False:
-            print ("Las piezas no son originales")
+            return ("Las piezas no son originales")
         else:
-            print ("Auto original")
+            return ("Auto original")
 
 
 a1 = Auto("model 3", 33000, [Asiento("blanco", 5000, 32),None, None, Asiento("blanco", 5000, 32), None],"tesla", Motor(4, "electrico", 32), 32)
